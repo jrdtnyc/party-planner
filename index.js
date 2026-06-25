@@ -73,7 +73,13 @@ const render = () => {
     individualParty.innerHTML = `
         <div id=individual>
             
-            <h3>${a_party.name}</h3>
+            <h3>'${a_party.name} #${a_party.id}'</h3>
+            <p>
+                ${a_party.date}
+            </p>    
+            <p>
+                ${a_party.location}
+            </p>
             <p>
                 ${a_party.description}
             </p>
