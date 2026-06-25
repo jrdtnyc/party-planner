@@ -1,0 +1,29 @@
+#title {
+  display: flex;
+  justify-content: center;
+}
+
+#columnNames {
+  display: flex;
+}
+
+#app {
+  display: flex;
+}
+
+#dataList {
+  flex: 1;
+}
+
+#individual {
+  flex: 1;
+}
+
+#theList {
+  flex: 1;
+}
+
+#theData {
+  flex: 1;
+  justify-content: left;
+}

@@ -10,10 +10,13 @@ let parties = [];
 let a_party = null;
 
 //Edit the HTML a bit
-const partyList = document.querySelector("#app");
+const appBody = document.querySelector("#app");
+const partyList = document.createElement("div");
+partyList.id = "dataList";
+appBody.append(partyList);
 const individualParty = document.createElement("div");
 individualParty.id = "individual";
-document.body.appendChild(individualParty);
+appBody.append(individualParty);
 const titleHeader = document.createElement("div");
 titleHeader.id = "title";
 titleHeader.innerHTML = `<h1>Party Planner</h1>`;
@@ -21,7 +24,7 @@ document.body.prepend(titleHeader);
 const columnNamesContainer = document.createElement("div");
 columnNamesContainer.id = "columnNames";
 titleHeader.insertAdjacentElement("afterend", columnNamesContainer);
-columnNamesContainer.innerHTML = `<div><h2>Upcoming Parties</h2></div><div><h2>Party Details</h2></div>`;
+columnNamesContainer.innerHTML = `<div id=theList><h2>Upcoming Parties</h2></div><div id=theData><h2>Party Details</h2></div>`;
 
 //Fetch the full list of data and make it available in state array parties
 const fetchParties = async () => {
